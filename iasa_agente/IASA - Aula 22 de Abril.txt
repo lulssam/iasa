@@ -1,0 +1,75 @@
+aspecto chave do método procura é a fronteira
+
+fifo -> primeiros a entrar são os primeiros a sair. Mais velhos são os primeiros a sair
+lifo -> ultimo a entrar são os primeiros a sair. Mais novos saem primeiro
+
+dimensao da solução = no inical até no final
+
+iterables em python
+
+def __iter__(self):
+retorna o iterador
+
+tornar classe indexavel -> getitem(self, index)
+
+na procura em profundidade é uma usada uma fronteira fifo
+a procura em largura utiliza uma fronteira lifo
+
+memorizar grafo -> inserir na fronteira e nos explorados mas so se o nó não existir ainda
+
+problema da contagem
+
+dado um valor inicial, um valor final e um conjunto de 
+incrementos possiveis, que incrementos realizar para atingir
+ou superer ou valor final.
+Para observar o efeito do custa na procura, o custo dos operadores
+corresponde ao quadrado do incremento
+
+Valor inicial = 0
+Valor final = 0
+Incrementos = [1,2]
+
+na pasta mod_prob vamos incluir classes de modelo do problema
+
+
+-----
+
+
+VALOR_INCIAL = 0
+VALOR_FINAL = 9
+INCREMENTOS = [1,2]
+problema = ProblemaContagem(VALOR_INCIAL, VALOR_FINAL, INCREMENTOS)
+
+-------
+
+Qual é a viabilidade de aplicar os métodos de raciocinio automatico com base em procura
+de espaços de estados em contextos reais?
+
+Para resolver um problema quais os recursos computacionais necessários?
+    * quanto tempo necessario?
+    * quanta memoria necessaria
+
+descobrir a profundidade -> vamos fazendo procuras sucessivas aumentando a profundidade até alguma dessas
+procuras encontrar solução
+
+-----
+
+caracterista de metodos: 
+    - completo e otimo? se exitir solução, garantidamente encontrar
+    - otimo? se existir solução, garantidamente a melhor
+    - complexidade? no total, quantos nos vão existir na memoria?
+
+-----
+procura melhor primeira -> avalia os percursos com funçao de avalicação dos nós.
+funçao f que normalmente é uma função de custo, tem um valor 0 ou >. Ao seja
+quanto maior a função, pior a solução.
+então tendo esta função de avaliação, preciso de ordenar os nos da fronteira
+por funcao de avaliação. Os que ficam no inicio são os melhores e vao ser os primeiros
+a serem explorados
+quando ele alguma vez encontrar uma solução vai ser a melhor de todas
+
+----
+procura de custo uniforme
+
+caso particular de procura melhor primeiro
+

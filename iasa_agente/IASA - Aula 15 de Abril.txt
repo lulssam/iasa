@@ -1,0 +1,41 @@
+Resolução automatica de problemas
+Problema de puzzle de peças deslizantes:
+    Sequência de movimentos
+
+Raciocinio automatico: capacidade de um sistema computacional resolver de forma automatica um
+problema com base numa representação de conhecimento do respetico domínio, produzindo uma solução
+a partir de diversas alternativas.
+
+É um processo computacional que tendo como entrada uma representação de conhecimento de um determinado
+domínio, produz como resultado conclusões baseadas nesse conhecimento
+
+
+operador gera transição de estado. 
+
+Raciocinio através de procura
+Problemas de planeamento:
+    Problemas cuja solução consiste numa sequência de ações a realizar e de situações
+    a percorrer  para, partindo de uma situação inicial, atingir uma situação final
+    (objetivo)
+
+Sequência de ações = plano.
+
+custo = soma dos custos das transições -> é acumulavel
+
+procura em profundidade
+decorre explorando os nós mais recentes primeiro, aumentando por isso
+a profundidade do ramo corrente de procura, tal como exemplificado para
+o problema do puzzle de 8 peças
+
+-------------
+propriedades em python:
+anotação própria -> @property
+
+-------------
+
+hash -> algo que identifica
+Estereótipo que indica a definição de mecanismos de identificação única
+
+dois objetos podem ter a mesma identidade se tiverem o mesmo hash e serem da mesma classe.
+
+fifo -> ultimos a entrar, ultimos a sair

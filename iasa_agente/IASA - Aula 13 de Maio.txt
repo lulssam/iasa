@@ -1,0 +1,9 @@
+Procura em espaço de estados -> proporciona um dominio da representação. Sistema vai observar o espaço 
+de estados e vai escolher um percurso e depois vai dar origem ao plano.
+
+Modelo do problema:
+    Estado -> posição do agente
+    Operador -> Define as transformaç~pes de estado deste problema
+    Problema -> Indica o estado inicial, o critierio para o estado ser objetivo...
+    Solução -> percurso
+

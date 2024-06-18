@@ -1,0 +1,15 @@
+Aproximar Dir:
+Se detectar estimulo alvo, vai produzir uma resposta
+mover na direção respectiva.
+
+elemento, distancia, posicao = percepcao[<direccao>]
+
+no estimuloAlvo:
+gama ** dist
+
+if elemento == Elemento.ALVO:
+
+ativar retorna intensidade. Se não for detetctado
+um alvo, retorna 0, se detectar, retorna gama**dist
+
+no recolher, substituir contar passos por aproximar alvo

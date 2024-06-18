@@ -1,0 +1,132 @@
+Arquitetura de Agentes Deliberativos
+
+Numa arquitetura reativa com memória, as reações podem manter o estado ou memória
+de situações passadas desfavoráveis. Assim consegue ser mais eficiente.
+
+Agente reativo com memória ainda não consegue planear trajetos. Vamos
+integrar uma arquitetura de sistema autonomo.
+
+Enquadramento base:
+3 horizontes:
+    1- um que avança para o futuro = PASSADO - PRESENTE - FUTURO -> Agentes Deliberativos: Antecipar
+    2- um que recua no tempo = PASSADO - PRESENTE -> Agentes reativos com estado: Repetir / Evita
+    3- outro que fica no presente = Agentes reativos sem estado (ausencia de memória): Reagir
+
+Agente não consegue simular a am memória. Se nos introduzirmos memória, o 
+horizonte alarga-se. 
+
+Evitar o passado, repetir o passado para ser mais eficiente.
+
+Caso geral implica 3 horizontes temporais.
+
+Antecipar o futuro é esencial para otimizar processo.
+
+Não há computação sem memória.
+
+Suporte = memória
+
+Passado = memória de recordações do passado (repetir/evitar): recordação em termos de processo cognitivo
+Presente = memória de perceções e de ações atuais (reagir): 
+Futuro: memória de simulação de situações e acções futuras (antecipar). Antecipar porque queremos atingir objetivos.
+
+Processo Deliberativos -> processo em que o agente intencionalmente, simula situações
+internas pelas quais pode passar.
+
+Arquitetura de Agente Deliberativos
+Mémoria -> elemento central vs agente reativo onde memória é auxiliar.
+É na memória onde será feita a simulação dos possiveis eventos
+processos cognitivos: processos de raciocinio e de decisão.
+raciocinio -> encontrar meios para realizar algo.
+decisão -> raciocinio especial do que fazer e como fazer.
+Resultado destes processos de internos -> planos de ação. 
+
+Sistemas intencionais -> sistemas que operam por concretização de intenções.
+Elemento central é o objetivo a atingir vs AR onde objetivos não eram explicitos.
+Agentes Deliberativos explicitam os objetivos. Se houver vários, sistema vai ter
+de decidir qual é que vai realizar, pois não pode realizar 2 objetivos ao mesmo tempo.
+Objetivos vão guiar todo o processamento interno do sistema.
+Fins e meios: Fins -> aquilo que se pretendo atingir
+              Meios -> recursos que usamos para atingir os fins.
+
+raciocinio sobre os meios -> planeamento que vai dar origem sobre os meios.
+raciocinio sobre os fins -> 
+
+Qualquer sistema tem que ter conhecimento para conseguir antecipar de tudo.
+conhecimento ou vem da experiencia do agente (agente que tenha memória)
+ou vem de algo que ja tem esse conhecimento e o transmiste (programador que informa).
+
+Modelo do mundo vai ser a base para dar essa informação. Qualquer agente Deliberativo
+precisa desse modelo interno para ser fazer simulações.
+
+Planos de ações: sequencias de ações pela quais o agente tem que passar para
+atingir certo objetivo. Podem ser so ações mas neste caso agente não consegues
+saber se são os mais adequados. 
+
+
+raciocinio automatico:
+O processo de raciocínio automático envolve dois tipos de actividades
+principais, a exploração de opções possíveis e a avaliação de opções para
+decisão acerca das melhores opções. Até agora, a avaliação das opções tem sido
+por custo, o que é que o agente tem a perder. Mas há outra forma -> Maximizar o ganho.
+
+Há varias area dso raciocínio automatico:
+raciocinio teorico -> resolver equação, tenho conjunto de o
+raciocinio prático -> raciocino orientado para a açãpo
+
+raciocinio prático:
+Area do raciocinio automático.
+No contexto Ode um agente autónomo que opera num determidado ambiente, é particularmente
+relevante o raciocinio orientado para a ação designado raciocinio prático.
+
+Tem 3 raciocínios.
+    1 - Objetivos a atingir.
+    2 - Ações que o agente pode fazer (N, S, E, O).
+    3 - Representação do mundo (ambiente, obstaculos, posições livres...).
+
+Resultado do raciocinio = planos de ação.
+
+Este tipo de raciocinio tem 3 vertentes:
+    1 - RACIOCÍNIO SOBRE FINS (DELIBERAÇÃO) -> Pegar na represnetação interna e perceber quais
+        é que são as o que fazer com as várias opções possiveis. E transforma em objetivos
+    2 - RACIOCÍNIO SOBRE MEIOS (PLANEAMENTO) -> Pega na Representação do mundo e transforma
+        em planos de ação.
+
+
+Racionalidade limitada -> agente não vai procurar atingr a solução otima mas então uma solução
+suficientemente boa.
+
+Nós vamos implementar uma racionalidade ótima, encontrar a melhor solução possivel.
+
+ARQUITECTURA DELIBERATIVA
+Modelo do mundo -> memória interna
+
+Processo de tomada de decisão:
+    Suporta o porcesso geral de tomada de decisão que determinda o comportamento do agente,
+    ou seja, quais as ações a realizar perante as perceções obtidas e o estado do modelo interno.
+        1 - Observar o mundo.
+        2 - Atualizar o modelo do mundo
+        3 - Deliberar o que fazer
+        4 - Planear gerando um plano de ação. Tendo sido produzido um plano, já não preciso
+        deliberar o que fazer nem planear outra vez. A não ser que aconteça que o ambiente
+        mude dinamicamente.
+        5 - Executar o plano de ação
+    
+    Quando os ambientes são muitos dinamicos, o processamento interno pode não conseguir
+    acompanhar e os planos depois já não são bons. 
+    Temos que garantir se o resultado do sistema é permanentemente bom 
+
+Reconsideração:
+Se o mundo se alterou ou se não houver planos, fazemos reconsideração.
+Reavaliação de opções com eventual mudança de planos. Função interna do sistema
+que perante as situações atuais decide de é necessário reconsiderar. Se não, o agente pode continuar
+com os planos originais
+
+Adicionamos o passo:
+    3. Se reconsiderar.
+        4. Deliberar
+        5- Planear
+
+Controlo -> aquele que coordena as actividades internas do sistema. Onde vai estar o processo
+de tomada de decisão.
+
+Estado do agente tem associado uma posiçao para efeitos de simulação e processo interno do agente.

@@ -1,0 +1,10 @@
+se não for possivel executar as ações em paralelo -> seleção de ações.
+prioridade por hierarquia: os comportamentos estão organizados numa hierarquia fixa de subsunção (supressão e substituição). Os maios altos são mais prioritários.
+
+associado a cada resposta temos uma prioridade.
+seleção de ação por prioridade: vê se a ação mais alta na hierarquia e associa-se à ação
+
+para recolher alvos precisamos de conseguir aproximar o alvo, evitar e explorar que vai dar sub-comportamentos. Para relacionar o comportamento com os sub-comportamentos usamos uma relação de composição
+
+critério de seleção de prioridade dinamica: quando não conseguimos seleção por prioridade tentamos este,
+

@@ -1,0 +1,37 @@
+Processos de decisão sequencial
+
+No problema geral de tomada de decisão por um agente que opera num determinado mundo,
+os estados e açoes do agente vão-se alterando ao longo do tempo, em função das
+decisões do agente, das ações selecionadas, e dos resultados dessas ações
+
+Num processo de decisão geral, para cada estado sn, cada decisão
+
+A inceerteza resulta da impossibilidade de se obter info completa relativa ao dominio
+do problema. Exemplo: navegação em veiculos autonomos.
+
+Não determinista: com determinada probabilidade faz esta coisa
+
+Sistema vai estar sempre a vir para o estado atual. Sistema consegue antecipar
+futuros possiveis -> é isso que os diferente ramos mostram.
+
+agente evolui fazendo ações. 
+Precisamos de incomrpar a incerteza. Quando ocorre uma ação, não produz
+uma unica ação determinista para um estado mas várias ações com uma probabilidade
+
+propriedade de markov -> evolução de cada dos estados só pode depender do estado atual.
+Não pode depender de estados passados. Se nos tivermos essa propriedade passamos a 
+ter processo de decisão de markov que é processo de decisão sequencial que satisfaz 
+a propriedade de markov
+
+modelo de transição -> representado pela função t
+da nos a info das probabilidades das transições de estado por efeito de ação A
+função de recompensa -> representado pela função r qual a recompensa numa transição
+
+utilidade -> valor de longo prazo de historia de evolução, de estar num 
+estado para efietos de concretização dos objetivos do sistama
+
+recompensa -> ganhos e perdas locais
+
+S = {s0, s1, s2}
+pol : S -> A(s) formato geral de função
+pol(s: S): A

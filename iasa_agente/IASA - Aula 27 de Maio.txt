@@ -1,0 +1,1 @@
+politica otima: escolha que maximiza o valor do estado

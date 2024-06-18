@@ -1,0 +1,9 @@
+{
+    "git.ignoreLimitWarning": true,
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "src:src/lib",
+        "PYTHONWRITEBYTECODE": "1",
+    },
+    "python.analysis.typeCheckingMode": "off",
+    "python.analysis.autoImportCompletions": false
+}
