@@ -13,8 +13,6 @@ Utiliza operadores que seguem e implementam a interface operador
 Mantéma  info se foi alterada ou não
 Permite obter o estado atual do agente
 Implementa interface Modelo Planeamento
-
-eu estou fartinha disto
 '''
 
 class ModeloMundo(ModeloPlan):
